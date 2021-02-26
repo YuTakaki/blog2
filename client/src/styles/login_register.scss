@@ -1,0 +1,95 @@
+@import 'variables';
+.loginForm, .registerForm{
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    header, footer, div, label, input[type=submit]{
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        background-color: $primaryColor;
+        padding: 5px;
+        color: white;
+        align-items: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        label{
+            height: 40px;
+            position: relative;
+            margin-top: 3px;
+            input{
+                height: 70%;
+                width: 90%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            ::placeholder{
+                color: $primaryColor;
+            }
+        }
+        .firstName{
+            background-color: #ff5851;
+
+        }
+        .lastName{
+            background-color: #6dac4fff;
+        }
+        .email{
+            background-color: #fee715ff;
+            input{
+                color: $primaryColor;
+            }
+            
+        }
+        .password{
+            background-color: #03dac6;
+        }
+        .retry_password{
+            background-color: #ff5851;
+        }
+        .submit{
+            margin-top: 3px;
+            background-color: #6dac4fff;
+            border: none;
+            outline: none;
+            height: 30px;
+            color: $primaryColor;
+
+        }
+    }
+    footer{
+        background-color: $secondaryColor;
+        height: 70px;
+        padding: 10px;
+        color: white;
+        a{
+            text-decoration: none;
+            color: #fee715ff;
+        }
+    }
+    .error{
+        background-color: red;
+        padding: 20px;
+        border: 1px solid white;
+        color: white;
+        display: flex;
+        p{
+            margin-left: 20px;
+        }
+    }
+
+}

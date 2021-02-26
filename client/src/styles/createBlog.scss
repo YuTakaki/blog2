@@ -1,0 +1,127 @@
+@import 'variables';
+
+.createBlog-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .view{
+        width: 90% !important;
+    }
+    .createBlog-forms{
+        background-color: $primaryColor;
+        position: fixed;
+        right: 0;
+        top: 75px;
+        height: 100%;
+        transition: 0.5s;
+        width: 0%;
+        border: 1px solid white;
+        form{
+            h2{
+                color: white;
+            }
+            width: 80%;
+            height: 100%;
+            resize: none;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            input{
+                width: 100%;
+            }
+            #textarea{
+                height: 50%;
+                textarea{
+                    height: 80%;
+                    width: 100%;
+                    resize: none;
+
+                }
+            }
+        }
+    }
+    .createBlog-preview{
+        width: 70%;
+        height: 100%;
+        margin-right: 30%;
+        i{
+            position: fixed;
+            top: 80%;
+            left: 20px;
+            font-size: 2em;
+            color: $primaryColor;
+            z-index: 11;
+        }
+        
+        nav{
+            position: fixed;
+            top: 0px;
+            display: flex;
+            width: 100%;
+            padding: 20px 40px;
+            justify-content: space-between;
+            border: 1px solid white;
+            background-color: $primaryColor;
+            color: white;
+            ul{
+                display: flex;
+                list-style-type: none;
+            }
+            li{
+                margin-right: 10px;
+                color: white;
+            }
+            a{
+                color: $primaryColor;
+                color: white;
+            }
+        }
+        .preview{
+            background-color: white;
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            margin-top: 70px;
+            padding: 40px;
+            img{
+                width: 100%;
+                margin: auto;
+                // position: absolute;
+            }
+            h1{
+                font-family: $primaryFont;
+                font-size: 4em;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 1.2em;
+                margin-top: 10px;
+                text-indent: 30px;
+                font-family: $secondaryFont;
+                line-height: 30px;
+            }
+            
+
+        }
+
+    }
+}
+
+@media only screen and (min-width : 800px){
+    .createBlog-container{
+        position: relative;
+        .createBlog-forms{
+            width: 30%;
+            top: 0;
+        }
+        .createBlog-preview{
+            width: 70%;
+            i{
+                display: none;
+            }
+        }
+        nav{
+            width: 70% !important;
+        }
+    }
+}

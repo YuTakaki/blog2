@@ -1,0 +1,319 @@
+@import 'variables';
+.Home{
+
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    .menu{
+        position: fixed;
+        right: 10px;
+        top: 20px;
+        font-size: 2.5em;
+        z-index: 2;
+    }
+    .openHeader{
+        width: 80%;
+        opacity: 1;
+    }
+    header{
+
+        position: fixed;
+        transition: 0.5s;
+        opacity: 0;
+        z-index: 11;
+        background-color: #101820ff;
+        height: 100%;
+        color: #fff;
+        width: 0;
+        max-width: 425px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        nav{
+            height: 10%;
+            padding: 10px;
+            border: 0.1px solid white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul{
+                display: flex;
+                list-style-type: none;
+                width: 50%;
+                justify-content: flex-end;
+                li{
+                    margin: 5px;
+                }
+            }
+        }
+    
+        .popular_blogs{
+            padding: 10px;
+            background-color: #101820ff;
+            height: 100%;
+            border: 0.1px solid white;
+            overflow: auto;
+            a{
+                height: max-content;
+                width: max-content;
+            }
+            .article{
+                display: flex;
+                .article_preview_img{
+                    height: 90px;
+                    width: 90px;
+                    background-color: cadetblue;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                }
+                h5{
+                    width: 70%;
+                }
+    
+            }
+            
+        }
+        footer{
+            height: 20%;
+            border: 0.1px solid white;
+        }
+        
+    }
+    main{
+        button{
+            width: 100%;
+            height: 50px;
+            font-family: $primaryFont;
+            font-size: 2em;
+            border: 1px solid white;
+            background-color: yellowgreen;
+            color: white;
+        }
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        .dashboard{
+            width: 100%;
+            height: 100%;
+            position: relative;
+                
+            input{
+                position: fixed;
+                top: 10px;
+                // z-index: 10;
+                
+                left: 20px;
+                width: 70%;
+                height: 30px;
+                outline: none;
+                border-radius: 2px;
+                border: 1px solid rgb(80, 80, 80);
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .articles{
+                width: 100%;
+                margin-top: 50px;
+                overflow: auto;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                
+                .article{
+                    width: 300px;
+                    height: 200px;
+                    flex-grow: 1;
+                    border: 1px solid white;
+                    padding: 20px;
+                    position: relative;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 0;
+                    }
+                    a{
+                        background-color: rgba(0, 0, 0, 0.5);
+                        padding: 10px;
+                        width: 100%;
+                        z-index: 1 !important;
+                      
+                    }
+                    .article_header{
+                        display: flex;
+                        justify-content: space-between;
+                        // background-color: rgba(0, 0, 0, 0.5);
+                        z-index: 2 !important;
+                        
+                       
+                    }
+                    .article_options{
+                        display: flex;
+                        flex-direction: column;
+                        z-index: 1 !important;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        padding: 10px;
+                    }
+                    i{
+                        color: white;
+                        font-size: 1.5em;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        overflow: hidden;
+
+                    }
+                }
+
+            }
+        }
+        .blog{
+            padding: 40px;
+            .blog_details{
+                display: flex;
+                padding: 0;
+                align-items: center;
+                p{
+                    font-weight: bold;
+                    margin: 0;
+                }
+                i{
+                    margin-left: 20px;
+                }
+            }
+            h1{
+                font-family: $primaryFont;
+                font-size: 3.5em;
+                margin-bottom: 20px;
+                margin-top: 70px;
+            }
+            p{
+                font-size: 1.2em;
+                margin-top: 10px;
+                text-indent: 10px;
+                font-family: $secondaryFont;
+                line-height: 30px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        
+        .articles{
+            margin-top: 75px;
+            background-color: white;
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            input{
+                position: fixed;
+                top: 2%;
+                left: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                z-index: 10;
+                font-size: 1em;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border: 1px solid rgb(130, 130, 130);
+            }
+            .article_lists{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                background-color: white;
+                overflow: hidden;
+                    
+                div{
+                    padding: 10px;
+                    border: 0.1px solid white;
+                    min-height: 200px;
+                    width: 200px;
+                    flex-grow: 1;
+                    
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        z-index: 0;
+                    }
+                    a{
+                        width: 100%;
+                        z-index: 10;
+                    }
+                    h2{
+                        
+                        // margin: auto;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        padding: 10px;
+                        
+                    }
+                    
+
+                }
+                
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width : 880px){
+    .Home{
+        .menu{
+            display: none;
+        }
+        
+        header{
+            width: 30% !important;
+            opacity: 1;
+            
+            min-width: 200px;
+            
+
+        }
+        main{
+            margin-left: 30%;
+            padding: 0;
+            form{
+                left: 50% !important;
+            }
+            .articles{
+                margin-top: 0;
+                input{
+                    left: 50%;
+                }
+                .article_lists{
+                    width: 100%;
+                    div{
+                        min-height: 250px;
+                        min-width: 250px;
+
+                    }
+                }
+            }
+            .dashboard{
+                input{
+                    left: 50%;
+                    width: 30%;
+                }
+
+            }
+
+        }
+        
+    }
+
+}
